@@ -5,7 +5,7 @@
 
 ### GROQ for Meet The Team
 ```
-*[_type=="team"]{name, role, bio, headshot, "headshot": headshot.asset->url} | order(order asc)
+*[_type=="team"]{name, role, bio, headshot, "headshot": headshot.asset->url, order} | order(order asc)
 ```
 * `| order(order asc)` reflects the doc order
 

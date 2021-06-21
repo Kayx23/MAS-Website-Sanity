@@ -32,6 +32,14 @@ export default {
       hidden: true,
     },
   ],
+  // apply the order (visually) in the document view
+  orderings: [
+    {
+      title: "Manual order",
+      name: "manualOrder",
+      by: [{ field: "order", direction: "asc" }],
+    },
+  ],
   preview: {
     select: {
       title: 'name',
