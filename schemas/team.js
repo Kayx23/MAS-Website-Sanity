@@ -24,6 +24,13 @@ export default {
       name: 'bio',
       type: 'text',
     },
+    // Ordering: this allows the document to show up in Order Documents
+    {
+      name: "order",
+      title: "Order",
+      type: "number",
+      hidden: true,
+    },
   ],
   preview: {
     select: {
