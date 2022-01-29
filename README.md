@@ -1,33 +1,20 @@
-# Sanity for MAS Website
-* Edit team information in Team
-* Order team members in "Order Document"
-* Published updates will be deployed to "Meet The Team" right away
+# MAS Website Sanity Configuration
+MAS Website [sanity studio configuration](https://www.sanity.io/docs/sanity-studio-configuration).
 
-### GROQ for Meet The Team
+## How to Start
+Start studio locally:
+```
+sanity start
+```
+
+Deploy studio config:
+```
+sanity deploy
+```
+
+## Query
+Query for `Meet The Team` page: 
 ```
 *[_type=="team"]{name, role, bio, headshot, "headshot": headshot.asset->url, order} | order(order asc)
 ```
 * `| order(order asc)` reflects the doc order
-
-### Quick Notes
-starting studio locally
-```
-$ sanity start
-```
-
-deploy studio
-```
-$ sanity deploy
-```
-
-### Sanity Blogging Content Studio
-
-Congratulations, you have now installed the Sanity Content Studio, an open source real-time content editing environment connected to the Sanity backend.
-
-Now you can do the following things:
-
-- [Read “getting started” in the docs](https://www.sanity.io/docs/introduction/getting-started?utm_source=readme)
-- Check out the example frontend: [React/Next.js](https://github.com/sanity-io/tutorial-sanity-blog-react-next)
-- [Read the blog post about this template](https://www.sanity.io/blog/build-your-own-blog-with-sanity-and-next-js?utm_source=readme)
-- [Join the community Slack](https://slack.sanity.io/?utm_source=readme)
-- [Extend and build plugins](https://www.sanity.io/docs/content-studio/extending?utm_source=readme)
